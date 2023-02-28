@@ -1,0 +1,18 @@
+<!doctype html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="test.js"></script>
+<script>
+
+function filterProducts(filterStr, products) {
+    
+    let requests = filterStr.split('&');
+    let arr = [[4]], i = 0;
+    for (let elem of requests) {
+        arr[i++] = elem.split(/-/g);
+    }
+    return products.filter(item => item.isIncludes(arr) );
+}
+  
+</script>
+
+</html>

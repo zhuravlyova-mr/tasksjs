@@ -1,0 +1,17 @@
+<!doctype html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="addBigValues.js"></script>
+<script>
+
+  function addBigValues(firstString, secondString)  {
+    
+      firstString = isValue(firstString);
+      secondString = isValue(secondString);
+    
+      return (firstString == undefined || secondString == undefined) ?
+          NaN.toString() : (BigInt(firstString) + BigInt(secondString)).toString();
+  }
+
+</script>
+
+</html>

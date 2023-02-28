@@ -1,0 +1,17 @@
+<!doctype html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="wordsInString.js"></script>
+<script>
+
+    function wordsInString(str) {
+        if (str == '' || str == undefined) {
+            return str;
+        }
+        let words = str.split(/[\s+\.\,\:\;\!\?\-\<\>\_\$\@\#\&\%\^\*\[\]\(\)\{\}\\\/\~\|\d]/);
+        words = words.filter(token =>  token != '');
+        return words.length;
+    }
+
+</script>
+
+</html>

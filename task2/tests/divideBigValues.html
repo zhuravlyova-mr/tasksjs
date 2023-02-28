@@ -1,0 +1,20 @@
+<!doctype html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="divideBigValues.js"></script>
+<script>
+
+function divideBigValues(firstString, secondString)  {
+    
+    firstString = isValue(firstString);
+    secondString = isValue(secondString);
+    
+    return (firstString == undefined || secondString == undefined) ?
+        NaN.toString() : ( (firstString == '' || firstString == '0') &&
+                           (secondString == ''|| secondString == '0') ) ? 
+                           NaN.toString() : (secondString == '0' || secondString == '') ? 
+                           Infinity : (BigInt(firstString) / BigInt(secondString)).toString();
+}
+
+</script>
+
+</html>

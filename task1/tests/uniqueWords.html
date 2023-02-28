@@ -1,0 +1,23 @@
+<!doctype html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="uniqueWords.js"></script>
+<script>
+
+    function uniqueWords(str) {
+        if (str == undefined) {
+            return undefined;
+        }
+
+        let words = str.toLowerCase().split(/[\s+\.\,\:\;\!\?\-\<\>\_\$\@\#\&\%\^\*\[\]\(\)\{\}\\\/\~\|\d]/);
+        words = words.filter(token =>  token != '');
+
+        return words.reduce((map, word) => {
+                map[word] ? ++map[word] : map[word] = 1;
+                return map; 
+               },
+        {});   
+    }
+  
+</script>
+
+</html>

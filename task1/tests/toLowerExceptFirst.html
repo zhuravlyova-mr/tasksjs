@@ -1,0 +1,14 @@
+<!doctype html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="toLowerExceptFirst.js"></script>
+<script>
+
+    function toLowerExceptFirst(str) {
+        return (str == '') ? '' : (str == undefined) ? 
+            undefined : str[0].toUpperCase() + 
+            str.slice(1).toLowerCase();
+    }
+
+</script>
+
+</html>

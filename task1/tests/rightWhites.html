@@ -1,0 +1,26 @@
+<!doctype html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="rightWhites.js"></script>
+<script>
+
+    function rightWhites(str) {
+        
+        if (str == '' || str == undefined) {
+            return str;
+        }
+
+        let marks = punctuationMarks(str);
+        if (marks == null) {
+            return str;
+        }
+        
+        str = str.replace(/ +/g, ' ').trim();  //str = str.split(/\s+/).join(' ');
+        let phrases = str.split(/[\.\,\:\;\!\?\"\'\`]/);
+        
+        phrases = phrases.filter(token =>  token != '');
+        
+        return toOriginal(phrases, marks);
+    }
+</script>
+
+</html>

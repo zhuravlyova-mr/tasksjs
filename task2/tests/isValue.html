@@ -1,0 +1,25 @@
+<!doctype html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="isValue.js"></script>
+<script>
+
+  function isValue(str) {
+
+      if (str == undefined) {
+          return str;
+      }
+
+      str = excludeTrimsAndPlus(str);
+      if (str == '') {
+          return str;
+      }
+
+      let matched = str.match(/^-?[1-9]\d*$|^0$/);
+      return (matched == null) ? undefined : matched.join();
+  }
+
+
+
+</script>
+
+</html>
